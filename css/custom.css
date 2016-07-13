@@ -9,16 +9,15 @@
 
 body {
 	background-color: #333333;
-	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 }
 
+.heading {
+	flex: 1;
 
-
-
-
-/**********************************************
-					MediaQueries
-**********************************************/
+}
 
 
 /**********************************************
@@ -135,11 +134,8 @@ body {
 
 footer {
 	background-color: #1a1a1a;
-	height: 50px;
 	width: 100%;
-	position: fixed;
-	bottom: 0;
-}
+	}
 
 
 .foot  div {
@@ -154,6 +150,7 @@ footer {
 #contact-button {
 	padding-right: 15%;
 	padding-top: 10px;
+	color: white;
 }
 
 
@@ -176,18 +173,111 @@ footer {
 
 
 /**********************************************
-			Clear Fix
+					MediaQueries
 **********************************************/
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
+
+@media screen and (min-width: 769px) {
+
+	body {
+		background-color: #cccccc;
+	}
+
+	footer, footer div {
+		background-color: white;
+		color: black;
+	}
+
+	.navbar-inverse {
+		color: black;
+		background-color: white;
+		border-bottom: none;
+		box-shadow:	0 5px 10px #0d0d0d;
+	}
+
+
+	#logo {
+		text-align: center;
+	}
+
+	#logo img {
+		box-shadow: none;
+		border: 1px solid black;
+	}
+   
+	.wrapper {
+		color: black;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		}
+
+	.wrapper p {
+		color: black;
+		font-size: 1.5em;
+		text-align: center;
+		margin-left: 10px;
+		margin-right: 10px;
+		text-shadow: none;
+	}
+	
+
+
+	
+	.heading h1 {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	.heading h1, div p {
+		color: black;
+		text-shadow: none;		
+	}
+
+	
+
+
 }
 
-.clearfix:after {
-  clear: both;
+@media screen and (min-width: 1025px) {
+	
+
+
+	.wrapper {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.wrapper img {
+		margin-top: 12%;
+		margin-bottom: 10%;
+	}
+
+	.col {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		flex-basis: 350px;
+
+	}
+
+	.item-2 {
+		order: -1;
+		flex-basis: 100%;
+
+	}
+
+	.item-1 {
+		border-right: 1px solid;
+	}
+
 }
 
-.clearfix {
-  zoom: 1; /* ie 6/7 */
-}
+
+
+
+
+
+
+
+
+
