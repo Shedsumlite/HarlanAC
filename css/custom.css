@@ -92,6 +92,16 @@ body {
 	font-size: 1.5em;
 }
 
+.services h2 {
+	font-size: 3.0em;
+	text-decoration: underline;
+	padding: 5px;
+}
+
+.services p {
+	padding: 0 15px;
+}
+
 .service-list {
 	list-style: none;
 	padding: 0;
@@ -102,11 +112,6 @@ body {
 	color: #d9d9d9;
 }
 
-.services h2 {
-	font-size: 3.0em;
-	text-decoration: underline;
-	padding: 5px;
-}
 
 .maint {
 	list-style: none;
@@ -114,15 +119,70 @@ body {
 	font-weight: bold;
 }
 
+#ccd-img {
+	text-align: center;
+	margin: 0 auto;
+	width: 30%;
+}
+
 /**********************************************
 			      Page: About
 **********************************************/
 
-.about-img img {
-	: 100%;
-}
 
 
+	#flex {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 10px;
+	}
+
+	.flex-intro, .flex-customer, .flex-preform, .flex-served {
+
+	}
+
+	.flex-intro p, .flex-customer p, .flex-preform p, .flex-served p {
+		font-size: 20px;
+	}
+
+	.flex-customer {
+		flex-basis: 70%;
+	}
+
+	.baby {
+		flex-basis: 30%;
+	}
+
+	.baby img {
+		width: 100%;
+	}
+
+	.van {
+		flex-basis: 20%;
+	}
+
+	.van img {
+		width: 100%;
+	}
+	
+	.flex-preform{
+		flex-basis: 70%;
+		padding-left: 10px;
+	}
+
+	.flex-served {
+		flex-basis: 70%;
+	}
+
+	.fire {
+		flex-basis: 30%;
+		justify-content: center;
+	}
+
+	.fire img {
+		width: 100%;
+	}
 
 
 
@@ -220,8 +280,6 @@ footer {
 		text-shadow: none;
 	}
 	
-
-
 	
 	.heading h1 {
 		font-weight: bold;
@@ -234,9 +292,66 @@ footer {
 	}
 
 	
+	/**********************************************
+				Page: Services
+**********************************************/
+
+	* {
+		color: black;
+	}
+
+	.services {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		color: black;
+		text-decoration: none;
+		text-shadow: none;
+	}
+
+	.service-list li, .maint li {
+		color: black;
+	}
+
+	.services h1 {
+		flex-grow: 5;
+		padding: 0 60px;
+		order: -10;
+	}
+
+
+	.serv {
+		flex-basis:100%;
+		order: -9;
+	}
+
+	.serv-maint {
+		flex-basis: 50%;
+		order: -8;
+		padding: 0 30px;
+	}
+
+	.serv-maint p, .serv-repair p, .serv-agree p {
+		font-size: 20px;
+	}
+
+	.serv-repair {
+		order: -7;
+		flex-basis: 50%;
+	}
+
+	.serv-agree {
+		order: -6;
+		flex-basis: 100%;
+
+	}
+	
+
 
 
 }
+
+
 
 @media screen and (min-width: 1025px) {
 	
@@ -270,13 +385,77 @@ footer {
 		border-right: 1px solid;
 	}
 
+
+
+
+
+
+	/**********************************************
+				   Page: About
+**********************************************/
+
+	#flex {
+	
+	}
+
+
+
+	.flex-intro p, .flex-customer p, .flex-preform p, .flex-served p {
+		font-size: 20px;
+	}
+
+	.flex-intro {
+		order: -10;
+	}
+
+	.flex-customer {
+		order: -8;
+		flex-basis: 80%;
+		padding-left: 10px;
+		border-bottom: 1px solid;
+	}
+
+	.baby {
+		flex-basis: 20%;
+		order: -9;
+		border-bottom: 1px solid;
+		padding-bottom: 10px;
+	}
+
+	.baby img, .fire img, .van img {
+		width: 100%;
+		border-radius: 25px;
+	}
+
+	.van {
+		flex-basis: 25%;
+		padding-top: 10px;
+	}
+
+	
+	.flex-preform{
+		order: -6;
+		flex-basis: 25%;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+
+	.flex-served {
+		padding-top: 10px;
+		flex-basis: 25%;
+		padding-left: 10px;
+	}
+
+	.fire {
+		flex-basis: 25%;
+		padding-top: 10px;
+	}
+
+
+
+
+
 }
-
-
-
-
-
-
 
 
 
