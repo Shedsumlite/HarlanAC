@@ -20,6 +20,10 @@ body {
 }
 
 
+
+
+
+
 /**********************************************
 					Logo
 **********************************************/
@@ -185,7 +189,36 @@ body {
 	}
 
 
+	/**********************************************
+				   Page: About
+**********************************************/
 
+
+	.site {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+	}
+
+	.site-content {
+		flex: 1;
+	}
+
+
+
+	/**********************************************
+				   Page: Contact
+**********************************************/
+
+
+	#vid {
+		margin-top: 10px;
+		flex-basis: 50%;
+	}
+	
+	.contact-hours, .contact-mail, .contact-form {
+		flex-basis: 100%;
+	}
 
 
 /**********************************************
@@ -230,13 +263,36 @@ footer {
 	outline: none;
 }
 
+.js-button {
+	text-decoration: none;
+	color: inherit;
+}
+
+.js-button:hover {
+	color: #999;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**********************************************
 					MediaQueries
 **********************************************/
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 800px) {
 
 	body {
 		background-color: #cccccc;
@@ -247,12 +303,28 @@ footer {
 		color: black;
 	}
 
+
+/***************************************
+					Navigation
+****************************************/
+	#navbar ul li a, .navbar-header a.navbar-brand {
+	color: #666666;
+}
+
+	#navbar ul li.active a {
+	color: white;
+}
+
 	.navbar-inverse {
 		color: black;
 		background-color: white;
 		border-bottom: none;
 		box-shadow:	0 5px 10px #0d0d0d;
 	}
+/**************************************
+					Basic
+***************************************/
+
 
 
 	#logo {
@@ -454,6 +526,29 @@ footer {
 
 
 
+	/**********************************************
+				   Page: Contact
+**********************************************/
+
+	.contact-hours {
+		flex-basis: 50%;
+		padding-left: 10%;
+	}
+
+	.contact-mail {
+		flex-basis: 50%;
+		padding-left: 10%;
+	}
+
+	.contact-form {
+		flex-basis: 50%;
+		padding-left: 10%;
+	}
+
+	#vid {
+		flex-basis: 50%;
+		padding-left: 10%;
+	}
 
 }
 
